@@ -21,3 +21,9 @@ jobs:
           pwd
           ls -la
           python --version
+          
+  say-goodbye:
+      runs-on: ubuntu-latest
+      steps:
+       - name: Print a greeting
+         run: echo "say goodbyeeee"
