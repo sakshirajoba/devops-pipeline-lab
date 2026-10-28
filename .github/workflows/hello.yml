@@ -1,0 +1,23 @@
+name: Hello Actions
+
+on: push
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a greeting
+        run: echo "hello from github actions1"
+      - name: Show context about the run
+        run: |
+          echo "Repository : ${{ github.repository }}"
+          echo "Branch     : ${{ github.ref_name }}"
+          echo "Triggered by: ${{github.actor}}"
+          echo "Commit     : ${{github.sha}}"
+
+
+      - name: Look around the machine
+        run: |
+          pwd
+          ls -la
+          python --version
